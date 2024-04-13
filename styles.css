@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    height:100vh;
+    font-family: 'Poppins', sans-serif;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+nav {
+    background-color: rgba(51, 51, 51, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    padding: 25px 25px;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+li {
+    display: inline;
+    margin: 0 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+a:hover {
+    color: rgb(0, 208, 255);
+}
+
+h1{
+    position:absolute;
+    top: 14rem;
+    left: 10%;
+    font-size: 10rem;
+    letter-spacing: 4px;
+    color: rgb(9, 209, 244);
+    text-shadow: 0 10PX 20px #040404a3;
+}
+
+.section1{
+    background-color: rgba(25, 92, 119, 0.936);
+    color: white;
+    padding: 5rem 0;
+}
+
+.secHeading{
+    font-size:5rem;
+    padding: 2rem 10rem 5rem 10rem;
+}
+
+.secHeading1{
+    font-size: 8rem;
+    padding: 10rem 10rem;
+}
+
+.text{
+    font-size: 1.5rem;
+    margin:0rem 0rem;
+    padding: 0 10rem 80px;
+    line-height: 4.5rem;
+}
+
+.bg{
+    position:relative;
+    width:100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height:500px;
+}
+.desc{
+    position:absolute;
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    top:40%;
+    left:60%;
+    transform:translateX(-50%) translateX(-50%);
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+.bg1{
+    background-image: url(img/underwater3.jpg);
+} 
+.bg2{
+    background-image: url(img/underwater2.jpg);
+}
+.bg3{
+    background-image: url(img/underwater4.jpg);
+}
+.bg4{
+    background-image: url(img/underwater5.jpg);
+}
+.bg0{
+    background-image: url("img/underwater1.jpg");
+    background-size: cover;
+    background-position: center;
+    height:900px;
+    left: -35px;
+    z-index: -1;
+    transform: translateZ(-40px) scale(5);
+}
+
+@media screen and (max-width: 768px) {
+
+    nav {
+        padding: 2%;
+    }
+
+    h1 {
+        top: 350px;
+        font-size: 12vw; /* Adjust font size for smaller screens */
+    }
+
+    .hero{
+        max-width: auto;
+        max-height: auto;
+        display: block;
+    }
+
+    .desc {
+        padding: 1rem 0.1rem;
+        left: 65%;
+        top: 50%;
+        font-size: 8vw; /* Adjust font size for smaller screens */
+    }
+
+    .secHeading {
+        padding-left: 40px;
+        font-size: 12vw; /* Adjust font size for smaller screens */
+    }
+
+    .text {
+        padding: 0 8%; /* Adjust padding for smaller screens */
+        font-size: 8vw; /* Adjust font size for smaller screens */
+    }
+}
+
+/* FAQ section */
+.faq {
+    padding: 50px 0; /* Adjust padding as needed */
+    background-color: #336f86; /* Adjust background color as needed */
+    color: #86bacf;
+}
+
+.faq-heading {
+    text-align: center; /* Center align the heading */
+    font-size: 2.5rem; /* Adjust font size */
+    margin-bottom: 30px; /* Add some space below the heading */
+}
+
+.faq-item {
+    margin-bottom: 20px; /* Add some space between FAQ items */
+    padding: 50px; /* Add padding to the FAQ items */
+}
+
+.faq-question {
+    font-weight: bold; /* Make the question bold */
+    font-size: 1.5rem; /* Adjust font size */
+}
+
+.faq-answer {
+    margin-top: 10px; /* Add some space between question and answer */
+    font-size: 1.2rem; /* Adjust font size */
+}
+
+
+/* Quote section */
+.quote-section {
+    padding: 10rem 0rem 10rem 0rem; /* Adjust padding as needed */
+    background-color: #f9f9f9; /* Adjust background color as needed */
+    text-align: center; /* Center align the content */
+}
+
+.quote {
+    font-size: 2rem; /* Adjust font size */
+    font-style: italic; /* Make the text italic */
+    margin-bottom: 20px; /* Add some space below the quote */
+}
+
+.quote-author {
+    font-weight: bold; /* Make the author name bold */
+    font-size: 1.5rem; /* Adjust font size */
+}
+
+.tips-section {
+    padding: 50px 0; /* Adjust padding as needed */
+    background-color: #f4f4f4; /* Adjust background color as needed */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Adjust gap between cards */
+}
+
+.card {
+    flex: 0 0 calc(50% - 20px); /* Adjust card width for two cards in a row */
+    max-width: 400px; /* Set maximum width for responsiveness */
+}
+
+.card img {
+    width: 100%; /* Ensure image fills the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add rounded corners to the image */
+    object-fit: cover; /* Maintain aspect ratio while covering the entire space */
+    max-height: 250px;
+}
+
+.card-content {
+    padding: 20px; /* Add padding to the card content */
+    background-color: #fff; /* Set background color for card content */
+    border-radius: 8px; /* Add rounded corners to the card content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to the cards */
+    flex-grow: 1;
+    white-space: normal;
+}
+
+.card-content h3 {
+    color: #333333;
+    font-size: 1.8rem; /* Adjust font size */
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #666666;
+    font-size: 1.2rem; /* Adjust font size */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    min-height: 400px;
+}
+
+.hero{
+    display: flex;
+}
+
+.hero-img{
+    max-width: 30%;
+    max-height: 90%;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+    padding-top: 0rem;
+}
+
+.hero-img1{
+    max-width: 120%;
+    max-height: 120%;
+    padding: 0rem 5rem 5rem 8rem;
+}
+
+.sec1{
+    display: 100%;
+    padding: 0rem 0rem 10rem 0rem;
+}
+
+footer{
+    background-color: #7b7474b3;
+    color: white;
+    text-align: center;
+    padding: 8px 0;
+}
