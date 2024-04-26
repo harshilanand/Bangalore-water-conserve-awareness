@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallex Effect</title>
+    <title>Save The Earth Project</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="apple.png">
+    <script src="https://js.arcgis.com/4.24/"></script>
 </head>
 
 <body>
@@ -21,13 +22,14 @@
                 <li><a href="#h2">2</a></li>
                 <li><a href="#h3">3</a></li>
                 <li><a href="#h4">4</a></li>
+                <li><a href="#h4">Stats</a></li>
                 <li><a href="#h5">Facts</a></li>
                 <li><a href="#h6">FAQs</a></li>
             </ul>
         </nav>
 
         <div class="bg0 bg" id="home">
-            <h1>SAVE WATER BANGALORE</h1>
+            <h1>GROUND WATERS OF BANGALORE</h1>
         </div>
 
         <section class="section1">
@@ -35,7 +37,7 @@
 
 
 
-            <h2 class="secHeading" id="h1">Step 1!</h2>
+            <h2 class="secHeading" id="h1">Tip 1!</h2>
             <p class="text">
                 Water is a precious resource essential for all forms of life. It's vital for ecosystems, agriculture,
                 industries, and our daily lives. However, with growing population and increasing demands, freshwater
@@ -45,7 +47,7 @@
             <div class="bg bg1">
                 <!-- <h2 class="desc"></h2> -->
             </div>
-            <h2 class="secHeading" id="h2">Step 2!! </h2>
+            <h2 class="secHeading" id="h2">Tip 2!! </h2>
             <div class="hero">
                 <p class="text">
                     Picture this: as you begin your day, standing at the sink with toothbrush in hand, there's a tiny
@@ -60,7 +62,7 @@
             <div class="bg bg2">
                 <!-- <h2 class="desc"></h2> -->
             </div>
-            <h2 class="secHeading" id="h3">Step 3!! </h2>
+            <h2 class="secHeading" id="h3">Tip 3!! </h2>
             <div class="hero">
                 <p class="text">
                     "Increase your toilet's water efficiency by placing a plastic bottle filled with pebbles or sand
@@ -76,7 +78,7 @@
             <div class="bg bg4">
                 <!-- <h2 class="desc"></h2> -->
             </div>
-            <h2 class="secHeading" id="h4">Step 4!! </h2>
+            <h2 class="secHeading" id="h4">Tip 4!! </h2>
             <div class="hero">
                 <p class="text">
                     Picture this: a tranquil morning, with sunlight dappling the quiet streets. In this peaceful scene,
@@ -144,6 +146,10 @@
             </div>
 
         </section><!-- End dashboard Section -->
+        <section>
+            <div id="viewDiv"></div>
+        </section>
+        
 
         <section class="sec1" id="h5">
             <h2 class="secHeading1">Water Conservation Facts</h2>
@@ -206,6 +212,32 @@
         </footer>
 
     </div>
+
+    <script>
+        // Load the ArcGIS modules
+        require([
+          "esri/config",
+          "esri/WebMap",
+          "esri/views/MapView"
+        ], function(esriConfig, WebMap, MapView) {
+          // Set the API key for authentication
+          esriConfig.apiKey = "AAPK86cc2a10d27b40c09abe8e00948596e4aPG0m9FWiiLNLrtyPUukKn7pjw2kJcmrhnuHfOFDIpogWauZ1bUC9NDD81p0Px2u";
+    
+          // Create a WebMap instance
+          const webmap = new WebMap({
+            portalItem: {
+              // Replace with the ID of your ArcGIS Online map
+              id: "e7bbe2bc41e34aaea420d631a912266b"
+            }
+          });
+    
+          // Create a MapView instance
+          const view = new MapView({
+            map: webmap,
+            container: "viewDiv"
+          });
+        });
+      </script>
 
 </body>
 
